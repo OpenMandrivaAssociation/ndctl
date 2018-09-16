@@ -12,7 +12,7 @@ Summary:	Manage "libnvdimm" subsystem devices (Non-volatile Memory)
 License:	GPLv2
 Group:		System/Base
 Url:		https://github.com/pmem/ndctl
-Source0:	https://github.com/pmem/%{name}/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0:	https://github.com/pmem/ndctl/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 Requires:	%{libname} = %{version}-%{release}
 Requires:	%{libdax} = %{version}-%{release}
