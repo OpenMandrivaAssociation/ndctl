@@ -6,7 +6,7 @@
 %define devdax	%mklibname -d daxctl
 
 Name:		ndctl
-Version:	62
+Version:	63
 Release:	1
 Summary:	Manage "libnvdimm" subsystem devices (Non-volatile Memory)
 License:	GPLv2
@@ -99,7 +99,8 @@ mappings of performance / feature-differentiated memory.
 %build
 echo %{version} > version
 ./autogen.sh
-%configure --disable-static --disable-silent-rules
+%configure --disable-static --disable-silent-rules \
+	--disable-docs
 %make
 
 %install
@@ -115,17 +116,17 @@ make check
 %files
 %license util/COPYING licenses/BSD-MIT licenses/CC0
 %{_bindir}/ndctl
-%{_mandir}/man1/ndctl*
+#% {_mandir}/man1/ndctl*
 %{bashcompdir}/
 %{_sysconfdir}/ndctl/monitor.conf
 %{_unitdir}/ndctl-monitor.service
-%{_udevrulesdir}/80-ndctl.rules
-%{udevdir}/ndctl-udev
+#% {_udevrulesdir}/80-ndctl.rules
+# % {udevdir}/ndctl-udev
 
 %files -n daxctl
 %license util/COPYING licenses/BSD-MIT licenses/CC0
 %{_bindir}/daxctl
-%{_mandir}/man1/daxctl*
+#% {_mandir}/man1/daxctl*
 
 %files -n %{libname}
 %doc README.md
