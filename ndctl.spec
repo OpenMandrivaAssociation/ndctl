@@ -7,7 +7,7 @@
 
 Name:		ndctl
 Version:	63
-Release:	1
+Release:	2
 Summary:	Manage "libnvdimm" subsystem devices (Non-volatile Memory)
 License:	GPLv2
 Group:		System/Base
