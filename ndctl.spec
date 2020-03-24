@@ -6,8 +6,8 @@
 %define devdax	%mklibname -d daxctl
 
 Name:		ndctl
-Version:	63
-Release:	2
+Version:	68
+Release:	1
 Summary:	Manage "libnvdimm" subsystem devices (Non-volatile Memory)
 License:	GPLv2
 Group:		System/Base
@@ -21,7 +21,7 @@ BuildRequires:	asciidoc
 BuildRequires:	xmlto
 BuildRequires:	automake
 BuildRequires:	libtool
-BuildRequires:	pkgconfig
+BuildRequires:	pkgconfig(libkeyutils)
 BuildRequires:	pkgconfig(libkmod)
 BuildRequires:	pkgconfig(libudev)
 BuildRequires:	pkgconfig(uuid)
@@ -120,6 +120,9 @@ make check
 %{bashcompdir}/
 %{_sysconfdir}/ndctl/monitor.conf
 %{_unitdir}/ndctl-monitor.service
+%{_sysconfdir}/modprobe.d/nvdimm-security.conf
+%{_sysconfdir}/ndctl/keys/keys.readme
+%{_datadir}/daxctl/daxctl.conf
 #% {_udevrulesdir}/80-ndctl.rules
 # % {udevdir}/ndctl-udev
 
