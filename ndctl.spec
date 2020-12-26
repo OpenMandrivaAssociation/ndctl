@@ -101,7 +101,7 @@ echo %{version} > version
 ./autogen.sh
 %configure --disable-static --disable-silent-rules \
 	--disable-docs
-%make
+%make_build
 
 %install
 %make_install
