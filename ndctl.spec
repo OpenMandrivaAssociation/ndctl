@@ -6,7 +6,7 @@
 %define devdax	%mklibname -d daxctl
 
 Name:		ndctl
-Version:	69
+Version:	71.1
 Release:	1
 Summary:	Manage "libnvdimm" subsystem devices (Non-volatile Memory)
 License:	GPLv2
@@ -114,7 +114,6 @@ make check
 %define udevdir %(pkg-config --variable=udevdir udev)
 
 %files
-%license util/COPYING licenses/BSD-MIT licenses/CC0
 %{_bindir}/ndctl
 #% {_mandir}/man1/ndctl*
 %{bashcompdir}/
@@ -127,18 +126,15 @@ make check
 # % {udevdir}/ndctl-udev
 
 %files -n daxctl
-%license util/COPYING licenses/BSD-MIT licenses/CC0
 %{_bindir}/daxctl
 #% {_mandir}/man1/daxctl*
 
 %files -n %{libname}
 %doc README.md
-%license COPYING licenses/BSD-MIT licenses/CC0
 %{_libdir}/libndctl.so.*
 
 %files -n %{libdax}
 %doc README.md
-%license COPYING licenses/BSD-MIT licenses/CC0
 %{_libdir}/libdaxctl.so.*
 
 %files -n %{devname}
