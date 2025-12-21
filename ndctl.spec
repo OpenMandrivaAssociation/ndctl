@@ -16,6 +16,8 @@ Source0:	https://github.com/pmem/ndctl/archive/v%{version}.tar.gz#/%{name}-%{ver
 
 Requires:	%{libname} = %{version}-%{release}
 Requires:	%{libdax} = %{version}-%{release}
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	autoconf
 BuildRequires:	asciidoc
 BuildRequires:	xmlto
