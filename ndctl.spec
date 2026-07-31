@@ -6,8 +6,8 @@
 %define devdax	%mklibname -d daxctl
 
 Name:		ndctl
-Version:	71.1
-Release:	3
+Version:	85
+Release:	1
 Summary:	Manage "libnvdimm" subsystem devices (Non-volatile Memory)
 License:	GPLv2
 Group:		System/Base
